@@ -1,0 +1,37 @@
+<div class="container custom-container-2">
+    <!-- Show it when there is no Student -->
+    <div class="no-data text-center" *ngIf="students.length === 0">
+      <p>There is no student added yet!</p>
+      <button class="btn btn-outline-primary" routerLink="/create-student">Add Student</button>
+    </div>
+  
+    <!-- Employees list table, it hides when there is no employee -->
+    <div *ngIf="students.length !== 0">
+      <h3 class="mb-3 text-center">Students List</h3>
+  
+      <div class="col-md-12">
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th scope="col">Student Id</th>
+              <th scope="col">Lastname</th>
+              <th scope="col">Firstname</th>
+              <th scope="col">Username</th>              
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let student of students.students">
+              <td>{{student._id}}</td>
+              <td>{{student.lname}}</td>
+              <td>{{student.fname}}</td>
+              <td>{{student.uname}}</td>
+              <td>  
+                <span class="edit" routerLink="#">Edit</span>
+                <span class="delete" >Delete</span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>  
+    </div>  
+  </div>  
