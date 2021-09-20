@@ -1,0 +1,22 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-5">
+            <h2 class="page-title">Login</h2>
+            <form #myForm="ngForm" (ngSubmit)="onLoginSubmit()">
+                <p>
+                    <label for="uname">Username:</label>
+                    <input type="text" class="form-control"
+                        [(ngModel)]="uname" name="uname">
+                </p>
+                <p>
+                    <label for="pasword">Password:</label>
+                    <input type="password" class="form-control"
+                        [(ngModel)]="password" name="password" required>
+                </p>
+                <p>
+                    <button type="submit" [disabled]="!myForm.valid">Submit</button>
+                </p>
+            </form>
+        </div>
+    </div>
+</div>
