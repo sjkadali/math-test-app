@@ -9,7 +9,7 @@ router.get('/', async (req, res) => {
 
 router.post('/',async (req, res) => {
     let body = req.body;
-    if (!body.lname) {
+    if (!body.lastName) {
         return res.status(400).json({'message': 'lastname is required'});
     }
     try {

@@ -10,7 +10,7 @@ router.post('/', async (req, res) => {
     if (users.length === 0) {
         return res.status(400).json({ message: 'User not Found, Please register'});
     }
-    const token = createJWT({ id: users[0].id, name:users[0].uname });
+    const token = createJWT({ id: users[0].id, name:users[0].email });
     return res.status(200).json({ token });
 });
 
