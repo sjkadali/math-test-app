@@ -1,0 +1,10 @@
+#sidebar-wrapper {
+    background-color: #878f8f;
+    max-height: 600px;
+    overflow-y: scroll;
+}
+
+.list-group-item {
+    background-color: #878f8f;
+    color: #ffff;
+}

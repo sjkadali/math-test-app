@@ -1,0 +1,13 @@
+h1 {
+    background-color: #04998d;
+    color: #fff;
+}
+
+.navbar-light {
+    background-color: #04998d;
+}
+
+ul.navbar-nav li a {
+    color: #fff;
+    font-size:large;
+}
